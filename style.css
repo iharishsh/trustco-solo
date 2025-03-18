@@ -1,0 +1,415 @@
+/* Reset and Base Styles */
+:root {
+    /* Colors */
+    --primary-color: #043A53;
+    --secondary-color: #0066A1;
+    --accent-color: #00A3E0;
+    --text-color: #333333;
+    --text-light: #666666;
+    --white: #F2F5F6;
+    --light-bg: #F5F6FA;
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Spacing */
+    --container-width: 1200px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Header/Navigation Styles */
+.header {
+    padding: var(--spacing-md) 0;
+    background-color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 42px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-white {
+    background-color: #FFFFFF;
+    color: #12141D;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0px 23px 47px 0px #043A533D;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-bg);
+}
+
+.btn-text {
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+}
+
+.btn-text:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: calc(var(--spacing-lg) * 3) 0 var(--spacing-lg);
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: #12141D;
+}
+
+.brand-text {
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #12141D;
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.play-icon {
+    margin-right: var(--spacing-xs);
+}
+
+.trust-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.trust-icon {
+    width: 84px;
+    height: 84px;
+}
+
+.stars {
+    color: #ffc400;
+    letter-spacing: 2px;
+}
+
+.reviews {
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+/* Social Proof Section */
+.social-proof {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Social Media Icons */
+.social-icon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.instagram {
+    top: 20%;
+    left: 25%;
+}
+
+.line {
+    top: 55%;
+    left: 18%;
+}
+
+.facebook {
+    top: 35%;
+    right: 10%;
+}
+
+.youtube {
+    bottom: 35%;
+    right: 18%;
+}
+
+.avatar {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--light-bg);
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatar img {
+    width: 150%;
+    height: 200%;
+    object-fit: cover;
+    border-radius: 35%;
+}
+
+.avatar-1 {
+    top: 40%;
+    left: 10%;
+}
+
+.avatar-2 {
+    top: 50%;
+    right: 10%;
+}
+
+.avatar-3 {
+    bottom: 25%;
+    left: 20%;
+}
+
+.avatar-4 {
+    top: 30%;
+    right: 18%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Header adjustments for mobile */
+    .header {
+        padding: 0.75rem 0;
+        background-color: rgba(242, 245, 246, 0.95);
+        backdrop-filter: blur(8px);
+    }
+
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        padding-top: 4.5rem;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        padding-top: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    /* Button adjustments */
+    .btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Social Proof Section - Mobile Layout */
+    .social-proof {
+        display: block;
+        position: relative;
+        height: 250px;
+        margin-top: 2rem;
+        bottom: 0;
+    }
+
+    /* Adjust avatar sizes and positions */
+    .avatar {
+        width: 45px;
+        height: 45px;
+        border: 2px solid #fff;
+    }
+
+    .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .avatar-1 {
+        bottom: 120px;
+        left: 25%;
+        top: auto;
+    }
+
+    .avatar-2 {
+        bottom: 160px;
+        right: 25%;
+        top: auto;
+    }
+
+    .avatar-3 {
+        bottom: 80px;
+        left: 35%;
+    }
+
+    .avatar-4 {
+        bottom: 140px;
+        right: 35%;
+        top: auto;
+    }
+
+    /* Adjust social icon sizes and positions */
+    .social-icon {
+        width: 24px;
+        height: 24px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-icon img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .instagram {
+        bottom: 170px;
+        left: 40%;
+        top: auto;
+    }
+
+    .line {
+        bottom: 100px;
+        left: 20%;
+        top: auto;
+    }
+
+    .facebook {
+        bottom: 140px;
+        right: 20%;
+        top: auto;
+    }
+
+    .youtube {
+        bottom: 80px;
+        right: 30%;
+        top: auto;
+    }
+
+    /* Trust rating adjustments */
+    .trust-rating {
+        margin-bottom: 2rem;
+    }
+} 
